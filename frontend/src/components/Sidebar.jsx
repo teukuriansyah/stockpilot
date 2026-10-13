@@ -19,10 +19,10 @@ export default function Sidebar() {
             <Link to="/" className={`${location.pathname == "/" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
                 <LayoutDashboard size={20} /> Overview
             </Link>
-            <Link className={`${location.pathname == "/products" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
+            <Link to="/products" className={`${location.pathname == "/products" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
                 <Package size={20} /> Products
             </Link>
-            <Link className={`${location.pathname == "/categories" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
+            <Link to="/categories" className={`${location.pathname == "/categories" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
                 <FolderTree size={20} /> Categories
             </Link>
             <Link className={`${location.pathname == "/suppliers" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
