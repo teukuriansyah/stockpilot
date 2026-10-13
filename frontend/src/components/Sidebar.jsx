@@ -25,13 +25,13 @@ export default function Sidebar() {
             <Link to="/categories" className={`${location.pathname == "/categories" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
                 <FolderTree size={20} /> Categories
             </Link>
-            <Link className={`${location.pathname == "/suppliers" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
+            <Link to="/suppliers" className={`${location.pathname == "/suppliers" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
                 <Truck size={20} /> Suppliers
             </Link>
-            <Link className={`${location.pathname == "/stock" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
+            <Link to="/stock" className={`${location.pathname == "/stock" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
                 <ArrowLeftRight size={20} /> Stock Movements
             </Link>
-            <Link className={`${location.pathname == "/purchase" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
+            <Link to="/order" className={`${location.pathname == "/order" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
                 <FileText size={20} /> Purchase Orders
             </Link>
             <Link className={`${location.pathname == "/reports" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>

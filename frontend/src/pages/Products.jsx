@@ -1,4 +1,4 @@
-import TableProduct from '../components/TableProduct'
+import Table from '../components/Table'
 
 export default function Products() {
   return (
@@ -8,7 +8,7 @@ export default function Products() {
             <span className='text-sm text-gray-800'>Kelola siklus hidup produk, ambang batas stok minimum, dan harga jual/beli berbasis Weighted-Average Costing (WAC) secara realtime.</span>
         </div>
         <div className="w-[95%] mt-4">
-            <TableProduct />
+            <Table />
         </div>
     </div>
   )
