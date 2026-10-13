@@ -16,7 +16,7 @@ export default function Sidebar() {
             </div>
         </div>
         <div className='flex flex-col mt-7 gap-3'>
-            <Link className={`${location.pathname == "/" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
+            <Link to="/" className={`${location.pathname == "/" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
                 <LayoutDashboard size={20} /> Overview
             </Link>
             <Link className={`${location.pathname == "/products" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
@@ -37,7 +37,7 @@ export default function Sidebar() {
             <Link className={`${location.pathname == "/reports" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
                 <BarChart3 size={20} /> Reports
             </Link>
-            <Link className={`${location.pathname == "/settings" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
+            <Link to="/settings" className={`${location.pathname == "/settings" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
                 <Settings size={20} /> Settings
             </Link>
         </div>
