@@ -1,7 +1,10 @@
 import axios from "axios"
 
 const api = axios.create({
-  baseUrl:import.meta.env.BASE_URL
+  baseURL:import.meta.env.VITE_BASEURL,
+  headers:{
+    'ngrok-skip-browser-warning': 'true'  
+  }
 })
 
 export async function getCategories() {
@@ -25,6 +28,6 @@ export async function getStock() {
 }
 
 export async function getOrder() {
-  const data = await api.get("/order")
+  const data = await api.get("/orders")
   return data
 }

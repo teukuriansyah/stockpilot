@@ -1,11 +1,12 @@
 import express from "express"
 import ngrok from "@ngrok/ngrok"
+import cors from "cors"
 import route from "./route/Route.js"
-import sequelize from "./database/Sequelize.js"
 import "dotenv/config"
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 app.use(route)
 

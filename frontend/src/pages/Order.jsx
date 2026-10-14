@@ -1,6 +1,18 @@
+import { useState, useEffect } from "react"
+import { getOrder } from "../services/Services"
 import Table from '../components/Table'
 
 export default function Order() {
+  const [data,setData] = useState([])
+  
+  const fetching = async() => {
+    const rawData = await getOrder()
+    setData(rawData.data.data)
+  }
+  
+  useEffect(() => {
+    fetching()
+  },[])
   return (
     <div className='bg-[#F8FAFC] p-4'>
         <div>
