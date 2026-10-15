@@ -80,7 +80,7 @@ const seeder = {
         sku: 'ELK-PWR-001',
         name: 'Power Bank Fast Charge 20.000mAh',
         description: 'Power bank kapasitas besar dengan dukungan pengisian cepat 22.5W',
-        category: 'PT Global Teknologi Nusantara',
+        category: 'Elektronik & Gadget',
         supplier: 'PT Global Teknologi Nusantara',
         costPrice: 180000,
         sellingPrice: 275000,
