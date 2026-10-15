@@ -1,11 +1,11 @@
 import { useLocation } from "react-router-dom"
 
-export default function Table() {
+export default function Table(props) {
   const location = useLocation()
   return (
-    <div className="rounded bg-white relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
+    <div className="rounded bg-white relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-gray-200">
         <table className="w-full text-sm text-left rtl:text-right text-body">
-            <thead className="bg-blue-100 text-sm text-body bg-neutral-secondary-soft border-b rounded-base border-default">
+            <thead className="bg-blue-100 text-sm text-body bg-neutral-secondary-soft border-b rounded-base border-gray-200">
                 <tr>
                     <th scope="col" className="px-6 py-3 font-medium">{location.pathname == "/suppliers" ? "PEMASOK & PIC" : location.pathname == "/products" ? "DETAIL PRODUCT & SKU" : location.pathname == "/categories" ? "KATEGORI & CAKUPAN SKU" : location.pathname == "/stock" ? "WAKTU & TANGGAL" : location.pathname == "/order" ? "NOMOR PO & TANGGAL" : null}
                     </th>
@@ -18,17 +18,7 @@ export default function Table() {
                 </tr>
             </thead>
             <tbody>
-                <tr className="bg-neutral-primary border-b border-default">
-                    <th scope="row" className="px-6 py-4 font-medium text-heading whitespace-nowrap">
-                        Apple MacBook Pro 17"
-                    </th>
-                    <td className="px-6 py-4">
-                        Silver
-                    </td>
-                    <td className="px-6 py-4">
-                        Laptop
-                    </td>
-                </tr>
+                {props.data}
             </tbody>
         </table>
     </div>

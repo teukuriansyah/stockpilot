@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { getCategories } from "../services/Services"
+import TableRowCategories from "../components/TableRowCategories"
 import Table from '../components/Table'
 
 export default function Categories() {
@@ -20,7 +21,7 @@ export default function Categories() {
             <span className='text-sm text-gray-800'>Kelola pengelompokan produk, ambang batas minimum default, dan proteksi integritas relasi produk untuk operasional toko ritel.</span>
         </div>
         <div className="w-[95%] mt-4">
-            <Table />
+            <Table data= {data?.map(d => <TableRowCategories color={d.color} title={d.name} icon={d.name?.split(" ").filter(d => d != "&").map(d => d[0].toUpperCase()).join("")} description={d.description}/>)}/>
         </div>
     </div>
   )

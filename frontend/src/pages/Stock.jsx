@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { getStock } from "../services/Services"
+import TableRowStock from "../components/TableRowStock"
 import Table from '../components/Table'
 
 export default function Stock() {
@@ -8,6 +9,15 @@ export default function Stock() {
   const fetching = async() => {
     const rawData = await getStock()
     setData(rawData.data.data)
+  }
+
+  const formatDate = date => {
+    let d = new Date(date);
+    const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    let dateResult = (d.getDate()) < 10 ?`0${d.getDate()}`: d.getDate()
+    let monthResult = d.getMonth()
+    let yearResult = d.getFullYear()
+    return `${dateResult}/${month[monthResult]}/${yearResult}`
   }
     
   useEffect(() => {
@@ -20,8 +30,8 @@ export default function Stock() {
             <span className='text-sm text-gray-800'>Rekam jejak seluruh mutasi inventaris secara realtime dengan audit non-negative guard, rekalkulasi Weighted Average Cost (WAC), dan penyesuaian fisik berkala</span>
         </div>
         <div className="w-[95%] mt-4">
-            <Table />
         </div>
+            <Table data={data.map(d => <TableRowStock date={formatDate(d.transactionDate)}/>)}/>
     </div>
   )
 }
