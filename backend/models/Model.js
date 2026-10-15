@@ -28,8 +28,8 @@ export const Products = sequelize.define("products",{
   sku:DataTypes.STRING,
   name:DataTypes.STRING,
   description:DataTypes.STRING,
-  categoryId:DataTypes.STRING,
-  supplierId:DataTypes.STRING,
+  category:DataTypes.STRING,
+  supplier:DataTypes.STRING,
   costPrice:DataTypes.INTEGER,
   sellingPrice:DataTypes.INTEGER,
   currentStock:DataTypes.INTEGER,
@@ -57,7 +57,7 @@ export const Stock = sequelize.define("stock",{
 
 export const Orders = sequelize.define("orders",{
   orderNumber:DataTypes.STRING,
-  supplierId:DataTypes.STRING,
+  supplier:DataTypes.STRING,
   orderDate:DataTypes.STRING,
   expectedDeliveryDate:DataTypes.STRING,
   items:DataTypes.STRING,

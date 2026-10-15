@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TableRowCategories(props) {
+export default function TableRowSupplier(props) {
   return (
     <tr className="bg-neutral-primary border-b border-gray-200">
       <td scope="row" className="px-6 py-4 text-heading flex items-center whitespace-nowrap gap-3">

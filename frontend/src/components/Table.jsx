@@ -16,13 +16,13 @@ export default function Table(props) {
                         {location.pathname == "/suppliers" ? "EMAIL" : location.pathname == "/products" ? "STOK FISIK & BUFFER" : location.pathname == "/stock" ? "SKU & NAMA PRODUK" : location.pathname == "/order" ? "JUMLAH ITEM/SKU" : null}
                     </th>
                     {
-                        location.pathname == "/suppliers" ? <th scope="col" className="px-6 py-3 font-medium">ADDRESS</th> : null
+                        location.pathname == "/suppliers" ? <th scope="col" className="px-6 py-3 font-medium">ADDRESS</th> : location.pathname == "/order" ? <th scope="col" className="px-6 py-3 font-medium">TOTAL NILAI</th> : location.pathname == "/products"?<th scope="col" className="px-6 py-3 font-medium">HARGA JUAL & HARGA BELI</th>:null
                     }
                     {
-                        location.pathname == "/stock" ? <th scope="col" className="px-6 py-3 font-medium">Stok awal</th> : null
+                        location.pathname == "/stock" ? <th scope="col" className="px-6 py-3 font-medium">Stok awal</th> : location.pathname == "/order" ? <th scope="col" className="px-6 py-3 font-medium">STATUS TAHAP</th> : null
                     }
                     {
-                        location.pathname == "/stock" ? <th scope="col" className="px-6 py-3 font-medium">Perubahan</th> : null
+                        location.pathname == "/stock" ? <th scope="col" className="px-6 py-3 font-medium">Perubahan</th> : location.pathname == "/order" ? <th scope="col" className="px-6 py-3 font-medium">ESTIMASI DATANG</th> : null
                     }
                     {
                         location.pathname == "/stock" ? <th scope="col" className="px-6 py-3 font-medium">Stok akhir</th> : null

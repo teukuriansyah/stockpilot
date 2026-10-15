@@ -34,9 +34,6 @@ export default function Sidebar() {
             <Link to="/order" className={`${location.pathname == "/order" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
                 <FileText size={20} /> Purchase Orders
             </Link>
-            <Link className={`${location.pathname == "/reports" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
-                <BarChart3 size={20} /> Reports
-            </Link>
             <Link to="/settings" className={`${location.pathname == "/settings" ? "bg-blue-600 text-white" : "text-gray-800 bg-white"} p-2 rounded flex items-center gap-2`}>
                 <Settings size={20} /> Settings
             </Link>
