@@ -31,7 +31,7 @@ export default function Stock() {
         </div>
         <div className="w-[95%] mt-4">
         </div>
-            <Table data={data.map(d => <TableRowStock date={formatDate(d.transactionDate)}/>)}/>
+            <Table data={data.map((d,i) => <TableRowStock key={i} type={d.type} name={d.name} date={formatDate(d.transactionDate)} stockBefore={d.stockBefore} quantity={d.quantity} stockAfter={d.stockAfter} reference={d.referenceNo}/>)}/>
     </div>
   )
 }

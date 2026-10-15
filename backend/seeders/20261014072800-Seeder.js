@@ -170,7 +170,7 @@ const seeder = {
     
     await queryInterface.bulkInsert('stock', [
       {
-        productId: 'prod-1',
+        name: 'Power Bank Fast Charge 20.000mAh',
         type: 'Stock In',
         quantity: 30,
         stockBefore: 5,
@@ -182,7 +182,7 @@ const seeder = {
         updatedAt: now,
       },
       {
-        productId: 'prod-3',
+        name: 'Keripik Singkong Balado Krispi 250g',
         type: 'Stock Out',
         quantity: 15,
         stockBefore: 15,
@@ -194,7 +194,7 @@ const seeder = {
         updatedAt: now,
       },
       {
-        productId: 'prod-4',
+        name: 'Teh Hijau Jasmine Botol 350ml',
         type: 'Stock In',
         quantity: 100,
         stockBefore: 20,
@@ -206,7 +206,7 @@ const seeder = {
         updatedAt: now,
       },
       {
-        productId: 'prod-6',
+        name: 'Masker Medis 3-Ply (Box 50 pcs)',
         type: 'Adjustment',
         quantity: -3,
         stockBefore: 8,

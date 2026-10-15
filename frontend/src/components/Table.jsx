@@ -10,11 +10,26 @@ export default function Table(props) {
                     <th scope="col" className="px-6 py-3 font-medium">{location.pathname == "/suppliers" ? "PEMASOK & PIC" : location.pathname == "/products" ? "DETAIL PRODUCT & SKU" : location.pathname == "/categories" ? "KATEGORI & CAKUPAN SKU" : location.pathname == "/stock" ? "WAKTU & TANGGAL" : location.pathname == "/order" ? "NOMOR PO & TANGGAL" : null}
                     </th>
                     <th scope="col" className="px-6 py-3 font-medium">
-                        {location.pathname == "/suppliers" ? "KATEGORI PRODUK" : location.pathname == "/products" ? "KATEGORI & PEMASOK" : location.pathname == "/categories" ? "SKU AKTIF" : location.pathname == "/stock" ? "TIPE MUTASI" : location.pathname == "/order" ? "PEMASOK" : null}
+                        {location.pathname == "/suppliers" ? "PHONE" : location.pathname == "/products" ? "KATEGORI & PEMASOK" : location.pathname == "/stock" ? "TIPE MUTASI" : location.pathname == "/order" ? "PEMASOK" : null}
                     </th>
                     <th scope="col" className="px-6 py-3 font-medium">
-                        {location.pathname == "/suppliers" ? "KONTAK & WILAYAH" : location.pathname == "/products" ? "STOK FISIK & BUFFER" : location.pathname == "/categories" ? "TOTAL VALUE" : location.pathname == "/stock" ? "SKU & NAMA PRODUK" : location.pathname == "/order" ? "JUMLAH ITEM/SKU" : null}
+                        {location.pathname == "/suppliers" ? "EMAIL" : location.pathname == "/products" ? "STOK FISIK & BUFFER" : location.pathname == "/stock" ? "SKU & NAMA PRODUK" : location.pathname == "/order" ? "JUMLAH ITEM/SKU" : null}
                     </th>
+                    {
+                        location.pathname == "/suppliers" ? <th scope="col" className="px-6 py-3 font-medium">ADDRESS</th> : null
+                    }
+                    {
+                        location.pathname == "/stock" ? <th scope="col" className="px-6 py-3 font-medium">Stok awal</th> : null
+                    }
+                    {
+                        location.pathname == "/stock" ? <th scope="col" className="px-6 py-3 font-medium">Perubahan</th> : null
+                    }
+                    {
+                        location.pathname == "/stock" ? <th scope="col" className="px-6 py-3 font-medium">Stok akhir</th> : null
+                    }
+                    {
+                        location.pathname == "/stock" ? <th scope="col" className="px-6 py-3 font-medium">Reference no</th> : null
+                    }
                 </tr>
             </thead>
             <tbody>

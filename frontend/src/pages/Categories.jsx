@@ -21,7 +21,7 @@ export default function Categories() {
             <span className='text-sm text-gray-800'>Kelola pengelompokan produk, ambang batas minimum default, dan proteksi integritas relasi produk untuk operasional toko ritel.</span>
         </div>
         <div className="w-[95%] mt-4">
-            <Table data= {data?.map(d => <TableRowCategories color={d.color} title={d.name} icon={d.name?.split(" ").filter(d => d != "&").map(d => d[0].toUpperCase()).join("")} description={d.description}/>)}/>
+            <Table data={data?.map((d,i) => <TableRowCategories key={i} color={d.color} title={d.name} icon={d.name?.split(" ").filter(d => d != "&").map(d => d[0].toUpperCase()).join("")} description={d.description}/>)}/>
         </div>
     </div>
   )

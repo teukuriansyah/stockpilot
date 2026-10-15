@@ -42,7 +42,7 @@ export const Products = sequelize.define("products",{
 })
 
 export const Stock = sequelize.define("stock",{
-  productId:DataTypes.STRING,
+  name:DataTypes.STRING,
   type:DataTypes.STRING,
   quantity:DataTypes.INTEGER,
   stockBefore:DataTypes.INTEGER,
